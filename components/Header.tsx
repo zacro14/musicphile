@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const Header = () => {
+    const router = useRouter()
     const link = [
         {
             name: 'Home',
@@ -30,9 +32,15 @@ const Header = () => {
                     {link.map((link, index) => (
                         <li key={index}>
                             <Link href={link.url} passHref>
-                                <a className="text-indigo-900 px-5 hover:text-indigo-700 font-medium transition delay-75">
-                                    {link.name}
-                                </a>
+                                {link.url === router.pathname ? (
+                                    <a className="text-indigo-400 px-5 font-medium transition delay-75">
+                                        {link.name}
+                                    </a>
+                                ) : (
+                                    <a className="text-indigo-900 px-5 hover:text-indigo-400 font-medium transition delay-75">
+                                        {link.name}
+                                    </a>
+                                )}
                             </Link>
                         </li>
                     ))}
