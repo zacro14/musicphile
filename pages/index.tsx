@@ -5,8 +5,10 @@ import ProductUsageSection from '../components/Home/ProductUsageSection'
 const Home: NextPage = () => {
     return (
         <>
-            <LandingSection />
-            <ProductUsageSection />
+            <div className="mx-auto">
+                <LandingSection />
+                <ProductUsageSection />
+            </div>
         </>
     )
 }

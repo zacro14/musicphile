@@ -15,7 +15,7 @@ const Header = () => {
         },
         {
             name: 'About Us',
-            url: '/about',
+            url: '/about-us',
         },
     ]
     return (
