@@ -23,7 +23,7 @@ const Header = () => {
             <div className="flex justify-center w-full px-3 items-center">
                 <div className="px-28">
                     <Link passHref href={'/'}>
-                        <a className="text-7xl font-bold text-indigo-800 cursor-pointer">
+                        <a className="text-7xl font-bold text-indigo-500 cursor-pointer">
                             TC
                         </a>
                     </Link>
@@ -33,7 +33,7 @@ const Header = () => {
                         <li key={index}>
                             <Link href={link.url} passHref>
                                 {link.url === router.pathname ? (
-                                    <a className="text-indigo-400 px-5 font-medium transition delay-75">
+                                    <a className="text-indigo-400 border-dotted border-2 border-indigo-600 px-5 font-medium transition delay-75">
                                         {link.name}
                                     </a>
                                 ) : (
