@@ -3,10 +3,9 @@ import React from 'react'
 
 const LandingSection = () => {
     return (
-        <section id="landing_section" className="min-h-80 w-full bg-white ">
+        <section id="landing_section" className="min-h-80 w-full">
             <div className="mx-auto container text-center py-10">
                 <h1 className="font-bold text-8xl mb-5">
-                    Hello! Welcome to{' '}
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                         Estimator
                     </span>

@@ -7,11 +7,11 @@ type Children = {
 
 const Layout: React.FC<Children> = ({ children }) => {
     return (
-        <>
+        <div className="bg-black">
             <Header />
             <main>{children}</main>
             <Footer />
-        </>
+        </div>
     )
 }
 
