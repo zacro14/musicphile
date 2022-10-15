@@ -4,12 +4,10 @@ import ProductUsageSection from '../components/Home/ProductUsageSection'
 
 const Home: NextPage = () => {
     return (
-        <>
-            <div className="mx-auto">
-                <LandingSection />
-                <ProductUsageSection />
-            </div>
-        </>
+        <div className="mx-auto min-h-screen">
+            <LandingSection />
+            <ProductUsageSection />
+        </div>
     )
 }
 
