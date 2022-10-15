@@ -10,8 +10,8 @@ const Header = () => {
             url: '/',
         },
         {
-            name: 'Calculator',
-            url: '/calculator',
+            name: 'Products',
+            url: '/products',
         },
         {
             name: 'About Us',
@@ -19,16 +19,9 @@ const Header = () => {
         },
     ]
     return (
-        <nav className="h-20 bg-white mx-auto flex align-middle border-b border-slate-300">
-            <div className="flex justify-center w-full px-3 items-center">
-                <div className="px-28">
-                    <Link passHref href={'/'}>
-                        <a className="text-7xl font-bold text-indigo-500 cursor-pointer">
-                            TC
-                        </a>
-                    </Link>
-                </div>
-                <ul className="flex ">
+        <nav className="h-20 container bg-white mx-auto flex align-middle">
+            <div className="flex justify-end w-full px-3 items-center">
+                <ul className="flex">
                     {link.map((link, index) => (
                         <li key={index}>
                             <Link href={link.url} passHref>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import Footer from './Home/Footer'
+import Footer from './Footer'
 type Children = {
     children: React.ReactNode
 }
