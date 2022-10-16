@@ -3,7 +3,7 @@ import React from 'react'
 const ProductUsageSection = () => {
     const product = [
         {
-            label: 'Calculate your tyaransportation allowance',
+            label: 'Calculate your transportation allowance',
         },
         {
             label: 'Easly calculate your 13month pay',

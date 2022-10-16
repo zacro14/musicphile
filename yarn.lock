@@ -48,6 +48,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:^2.0.12":
+  version: 2.0.12
+  resolution: "@heroicons/react@npm:2.0.12"
+  peerDependencies:
+    react: ">= 16"
+  checksum: d8e52410890db3337c3c82dcc223eeb3d88badcf96438e38fd9f4cc7aaafa41eb3653dcea6d9f1a8cac55e1076ac3b7a53fb87bfae71b5b202abf0e85066d004
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.10.5":
   version: 0.10.7
   resolution: "@humanwhocodes/config-array@npm:0.10.7"
@@ -3265,6 +3274,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "transpocalculator-frontend@workspace:."
   dependencies:
+    "@heroicons/react": ^2.0.12
     "@types/node": 18.8.3
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
