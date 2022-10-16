@@ -4,7 +4,8 @@ import React from 'react'
 const LandingSection = () => {
     return (
         <section id="landing_section" className="min-h-80 w-full">
-            <div className="mx-auto container text-center py-10">
+            <div className="mx-auto container text-center py-10 relative">
+                <div className="absolute inset-0 h-80 blur-3xl to-purple-500 via-indigo-300 opacity-20 bg-gradient-to-tl from-purple-700"></div>
                 <h1 className="font-bold text-8xl mb-5">
                     <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                         Estimator

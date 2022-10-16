@@ -3,7 +3,7 @@ import React from 'react'
 const ProductUsageSection = () => {
     const product = [
         {
-            label: 'Transportation allowance',
+            label: 'Calculate your tyaransportation allowance',
         },
         {
             label: 'Easly calculate your 13month pay',
@@ -21,7 +21,7 @@ const ProductUsageSection = () => {
                 {product.map((product) => (
                     <div
                         key={product.label}
-                        className="container items-center h-20 border border-opacity-10 flex justify-center rounded-md"
+                        className="container items-center h-40 flex justify-center rounded-md bg-neutral-900 border border-neutral-700"
                     >
                         <div className="text-slate-400">
                             <h3 className="font-medium text-lg">
