@@ -1,6 +1,7 @@
+import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import { Bars2Icon } from '@heroicons/react/24/solid'
 
 const Header = () => {
     const router = useRouter()
@@ -21,7 +22,11 @@ const Header = () => {
     return (
         <nav className="h-20 container mx-auto flex align-middle">
             <div className="flex justify-end w-full px-3 items-center">
-                <ul className="flex">
+                <span className="sm:hidden">
+                    <Bars2Icon className="text-white h-10 w-10" />
+                </span>
+
+                <ul className="hidden sm:flex md:flex">
                     {link.map((link, index) => (
                         <li key={index}>
                             <Link href={link.url} passHref>

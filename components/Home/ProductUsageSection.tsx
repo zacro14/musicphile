@@ -13,11 +13,11 @@ const ProductUsageSection = () => {
         },
     ]
     return (
-        <section id="about_product" className="h-96 mx-auto py-5">
-            <h2 className="font-bold text-white text-4xl text-center py-10">
-                What We Do?
+        <section id="about_product" className="min-h-96 mx-auto py-5">
+            <h2 className="font-bold text-white text-4xl text-center py-10 underline underline-offset-8 decoration-indigo-500">
+                What we do?
             </h2>
-            <div className="grid grid-cols-3 gap-4 text-center py-5 mx-auto container">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center py-5 mx-auto container">
                 {product.map((product) => (
                     <div
                         key={product.label}

@@ -4,7 +4,7 @@ import ProductUsageSection from '../components/Home/ProductUsageSection'
 
 const Home: NextPage = () => {
     return (
-        <div className="mx-auto min-h-screen">
+        <div className="mx-auto min-h-screen px-3">
             <LandingSection />
             <ProductUsageSection />
         </div>
