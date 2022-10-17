@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { WalletIcon } from '@heroicons/react/24/solid'
+import { WalletIcon, PlayCircleIcon } from '@heroicons/react/24/solid'
 
 const LandingSection = () => {
     return (
@@ -9,23 +9,22 @@ const LandingSection = () => {
                 <div className="py-10">
                     <h1 className="font-bold text-7xl md:text-8xl mb-5">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                            Estimator
+                            Musicphile
                         </span>
                     </h1>
                     <h2 className="text-stone-500 mb-5">
-                        Your Transportation Expenses, 13 Month Pay and Allowance
-                        Calculator.
+                        For You Who Loves Music
                     </h2>
-                    <Link href={{ pathname: '/products' }} passHref>
+                    <Link href={{ pathname: '/charts' }} passHref>
                         <button className="bg-indigo-500 shadow-lg shadow-indigo-500/50 px-5 py-3 rounded-lg cursor-pointer text-white ">
-                            Getting Started
+                            Try it now
                         </button>
                     </Link>
                 </div>
 
                 <div className="relative mx-auto">
-                    <span>
-                        <WalletIcon className="h-36 w-36 text-indigo-300" />
+                    <span className="z-10">
+                        <PlayCircleIcon className="h-36 w-36 text-indigo-300 hover:scale-110 delay-100" />
                     </span>
                     <div
                         aria-hidden={true}

@@ -1,31 +1,21 @@
 import React from 'react'
+import { WHATWEOFFER } from '../../assets/constants'
 
 const ProductUsageSection = () => {
-    const product = [
-        {
-            label: 'Calculate your transportation allowance',
-        },
-        {
-            label: 'Easly calculate your 13month pay',
-        },
-        {
-            label: 'Keep track on your allowance',
-        },
-    ]
     return (
         <section id="about_product" className="min-h-96 mx-auto py-5">
             <h2 className="font-bold text-white text-4xl text-center py-10 underline underline-offset-8 decoration-indigo-500">
-                What we do?
+                What We Offer
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center py-5 mx-auto container">
-                {product.map((product) => (
+                {WHATWEOFFER.map((offer) => (
                     <div
-                        key={product.label}
+                        key={offer.label}
                         className="container items-center h-40 flex justify-center rounded-md bg-neutral-900 border border-neutral-700"
                     >
                         <div className="text-slate-400">
                             <h3 className="font-medium text-lg">
-                                {product.label}
+                                {offer.label}
                             </h3>
                         </div>
                     </div>
