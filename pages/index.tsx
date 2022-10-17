@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import GlobalTopSongs from '../components/Home/GlobalTopSongs'
 import LandingSection from '../components/Home/LandingSection'
 import ProductUsageSection from '../components/Home/ProductUsageSection'
 
@@ -7,6 +8,7 @@ const Home: NextPage = () => {
         <div className="mx-auto min-h-screen px-3">
             <LandingSection />
             <ProductUsageSection />
+            <GlobalTopSongs />
         </div>
     )
 }
