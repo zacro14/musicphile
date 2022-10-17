@@ -48,6 +48,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:^2.0.12":
+  version: 2.0.12
+  resolution: "@heroicons/react@npm:2.0.12"
+  peerDependencies:
+    react: ">= 16"
+  checksum: d8e52410890db3337c3c82dcc223eeb3d88badcf96438e38fd9f4cc7aaafa41eb3653dcea6d9f1a8cac55e1076ac3b7a53fb87bfae71b5b202abf0e85066d004
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.10.5":
   version: 0.10.7
   resolution: "@humanwhocodes/config-array@npm:0.10.7"
@@ -2285,6 +2294,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-seo@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "next-seo@npm:5.6.0"
+  peerDependencies:
+    next: ^8.1.1-canary.54 || >=9.0.0
+    react: ">=16.0.0"
+    react-dom: ">=16.0.0"
+  checksum: 1fc5ee3284d048b05d8e3e0ab23224b23b442e2f24d0173cd0185cb4443697f5347c9d2ba5c1ca950147e04414915493ff4b48cfdf03891d54e536c1cf4fc42c
+  languageName: node
+  linkType: hard
+
 "next@npm:12.3.1":
   version: 12.3.1
   resolution: "next@npm:12.3.1"
@@ -3265,6 +3285,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "transpocalculator-frontend@workspace:."
   dependencies:
+    "@heroicons/react": ^2.0.12
     "@types/node": 18.8.3
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
@@ -3272,6 +3293,7 @@ __metadata:
     eslint: 8.25.0
     eslint-config-next: 12.3.1
     next: 12.3.1
+    next-seo: ^5.6.0
     postcss: ^8.4.17
     react: 18.2.0
     react-dom: 18.2.0
