@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { WalletIcon, PlayCircleIcon } from '@heroicons/react/24/solid'
+import { PlayCircleIcon } from '@heroicons/react/24/solid'
 
 const LandingSection = () => {
     return (
@@ -22,13 +22,13 @@ const LandingSection = () => {
                     </Link>
                 </div>
 
-                <div className="relative mx-auto">
-                    <span className="z-10">
-                        <PlayCircleIcon className="h-36 w-36 text-indigo-300 hover:scale-110 delay-100" />
+                <div className="relative mx-auto group">
+                    <span className="z-10 ">
+                        <PlayCircleIcon className=" cursor-pointer h-36 w-36 text-indigo-300 group-hover:scale-110 ease-in-out duration-300" />
                     </span>
                     <div
                         aria-hidden={true}
-                        className="absolute hover:opacity-90 duration-500 inset-0 z-0 blur-3xl to-orange-500 scale-110 via-indigo-600 from-purple-500 opacity-60 bg-gradient-to-tl rounded-full"
+                        className="absolute z-0 group-hover:opacity-90 duration-500 inset-0 blur-3xl to-orange-500 scale-110 via-indigo-600 from-purple-500 opacity-60 bg-gradient-to-tl rounded-full"
                     ></div>
                 </div>
             </div>

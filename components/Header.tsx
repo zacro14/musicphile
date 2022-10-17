@@ -6,7 +6,6 @@ import { NAVLINKS } from '../assets/constants'
 
 const Header = () => {
     const router = useRouter()
-
     return (
         <nav className="h-20 container mx-auto flex align-middle">
             <div className="flex justify-end w-full px-3 items-center">

@@ -12,7 +12,7 @@ const GlobalTopSongs = () => {
                     order={1}
                     song={'Unholy'}
                     artist={'Jin'}
-                    thumbImg={SongThumb.src}
+                    thumbImg={SongThumb}
                 />
             </div>
         </section>
