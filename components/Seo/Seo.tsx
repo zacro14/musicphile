@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import { NextSeo } from 'next-seo'
-import seoconfig from '../../seo.config'
+import seoconfig from 'seo.config'
 
 interface Props {
     title?: string
