@@ -24,3 +24,5 @@ export const NAVLINKS = [
         url: '/about-us',
     },
 ]
+
+export const images = [{}]

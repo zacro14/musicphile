@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-
+import { PlayCircleIcon } from '@heroicons/react/24/solid'
 interface Props {
     order: number
     song: string
@@ -25,6 +25,9 @@ const SonglistItem = (props: Props) => {
                         alt={song}
                         layout="fill"
                     />
+                    <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
+                        <PlayCircleIcon className="h-10 w-10  hover:animate-ping cursor-pointer" />
+                    </div>
                 </div>
             </div>
             <div className="flex-1 w-32">
