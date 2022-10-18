@@ -6,7 +6,7 @@ interface Props {
     order: number
     song: string
     artist: string
-    thumbImg?: string | StaticImageData
+    thumbImg?: string | StaticImageData | any
 }
 
 const SonglistItem = (props: Props) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import SonglistItem from '../SonglistItem'
 import TextHeader from '../TextHeader'
-import SongThumb from '../../assets/image/200x200bb.webp'
+import SongThumb from '@assets/image/200x200bb.webp'
 
 const GlobalTopSongs = () => {
     return (
