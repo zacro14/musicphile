@@ -24,11 +24,29 @@ const GlobalTopSongs = () => {
                             artist={'Jin'}
                             thumbImg={SongThumb}
                         />
+                        <SonglistItem
+                            order={1}
+                            song={'Unholy'}
+                            artist={'Jin'}
+                            thumbImg={SongThumb}
+                        />
+                        <SonglistItem
+                            order={1}
+                            song={'Unholy'}
+                            artist={'Jin'}
+                            thumbImg={SongThumb}
+                        />
                     </div>
 
                     <div className="snap-center px-3 w-96 overflow-x-auto shrink-0">
                         <SonglistItem
                             order={2}
+                            song={'Unholy'}
+                            artist={'Jin'}
+                            thumbImg={SongThumb}
+                        />
+                        <SonglistItem
+                            order={1}
                             song={'Unholy'}
                             artist={'Jin'}
                             thumbImg={SongThumb}

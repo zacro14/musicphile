@@ -12,10 +12,10 @@ const ChartCard = (props: Props) => {
     const { banner, category, title, description } = props
     return (
         <div className="flex flex-col gap-y-3 ">
-            <div className="relative h-96 w-96 overflow-hidden bg-neutral-900 rounded-xl">
+            <div className="relative h-96 w-96 overflow-hidden bg-neutral-800 rounded-xl">
                 <div className="absolute top-0 left-0 right-0 bottom-0">
                     <ul className="absolute -top-56 right-40 -rotate-45">
-                        <li className="absolute w-40 h-40 top-44 right-44">
+                        <li className="absolute w-40 h-40 top-44 right-44 border-2 border-slate-700 rounded-lg">
                             <Image
                                 className="rounded-lg"
                                 src={banner}
