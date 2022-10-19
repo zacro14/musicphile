@@ -5,9 +5,9 @@ import TextHeader from '@components/TextHeader'
 
 const MoreChart = () => {
     return (
-        <div className=" py-5  my-5 border-t border-t-1 border-slate-300 border-opacity-10">
+        <div className="my-5 border-t border-t-1 border-slate-300 border-opacity-10">
             <TextHeader>Other Charts</TextHeader>
-            <div className="container mx-auto before:snap-x flex overflow-x-auto px-5 gap-x-5">
+            <div className="container mx-auto before:snap-x flex overflow-x-auto px-5">
                 <ChartCard
                     banner={MoreChartBanner}
                     title={'Top 200'}

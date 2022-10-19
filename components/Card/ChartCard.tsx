@@ -11,7 +11,7 @@ interface Props {
 const ChartCard = (props: Props) => {
     const { banner, category, title, description } = props
     return (
-        <div className="flex flex-col gap-y-3 ">
+        <div className="flex flex-col gap-y-3 mr-5">
             <div className="relative h-96 w-96 overflow-hidden bg-neutral-800 rounded-xl">
                 <div className="absolute top-0 left-0 right-0 bottom-0">
                     <ul className="absolute -top-56 right-40 -rotate-45">
