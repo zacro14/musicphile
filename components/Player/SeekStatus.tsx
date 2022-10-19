@@ -2,7 +2,7 @@ import React from 'react'
 
 const SeekStatus = () => {
     return (
-        <div className="hidden sm:flex flex-row items-center justify-center">
+        <div className="hidden sm:flex flex-row items-center justify-center flex-auto">
             <p className="text-white">{'0:00'}</p>
             <input
                 type="range"

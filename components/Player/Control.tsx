@@ -11,21 +11,24 @@ const Control = () => {
     const [playing, setPlaying] = useState<boolean>(false)
 
     return (
-        <div className="flex items-center justify-around md:w-28 lg:w-52 2xl:w-80">
+        <div className="flex max-w-[120px] items-center justify-around md:w-28 lg:w-52 2xl:w-80 flex-auto mx-20">
             <MdSkipPrevious size={30} className="cursor-pointer text-white" />
-            {playing ? (
-                <BsFillPauseFill
-                    size={30}
-                    className="cursor-pointer text-white"
-                    onClick={() => setPlaying(!playing)}
-                />
-            ) : (
-                <BsFillPlayFill
-                    onClick={() => setPlaying(!playing)}
-                    size={30}
-                    className="cursor-pointer text-white"
-                />
-            )}
+            <span className="rounded-full bg-slate-600 flex items-center justify-center h-[40px] w-[40px]">
+                {playing ? (
+                    <BsFillPauseFill
+                        size={30}
+                        className="cursor-pointer text-white"
+                        onClick={() => setPlaying(!playing)}
+                    />
+                ) : (
+                    <BsFillPlayFill
+                        onClick={() => setPlaying(!playing)}
+                        size={30}
+                        className="cursor-pointer text-white ml-1"
+                    />
+                )}
+            </span>
+
             <MdSkipNext size={30} className=" cursor-pointer text-white" />
         </div>
     )

@@ -1,7 +1,12 @@
 import React from 'react'
+import { HiVolumeUp } from 'react-icons/hi'
 
 const Volume = () => {
-    return <div>Volume</div>
+    return (
+        <div>
+            <HiVolumeUp size={30} className="cursor-pointer text-white" />
+        </div>
+    )
 }
 
 export default Volume

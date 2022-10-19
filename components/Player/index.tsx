@@ -2,6 +2,7 @@ import React from 'react'
 import Control from './Control'
 import SeekStatus from './SeekStatus'
 import Track from './Track'
+import Volume from './Volume'
 
 const MusicPlayer = () => {
     return (
@@ -10,6 +11,7 @@ const MusicPlayer = () => {
                 <Track />
                 <SeekStatus />
                 <Control />
+                <Volume />
             </div>
         </div>
     )
