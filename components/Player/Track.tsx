@@ -5,7 +5,7 @@ import TrackImage from '@assets/image/200x200bb more_chart_2.webp'
 const Track = () => {
     return (
         <div className="flex">
-            <div className="relative h-14 w-14 mr-3">
+            <div className="hidden md:flex lg:flex relative h-14 w-14 mr-3">
                 <Image
                     className="rounded-lg"
                     src={TrackImage}

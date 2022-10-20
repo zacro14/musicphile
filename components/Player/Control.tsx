@@ -11,7 +11,7 @@ const Control = () => {
     const [playing, setPlaying] = useState<boolean>(false)
 
     return (
-        <div className="flex max-w-[120px] items-center justify-around md:w-28 lg:w-52 2xl:w-80 flex-auto mx-20">
+        <div className="flex w-24 md:max-w-[120px] lg:max-w-[120px] items-center justify-around md:w-28 lg:w-52 2xl:w-80 flex-auto mx-10 md:mx-20 lg:20">
             <MdSkipPrevious size={30} className="cursor-pointer text-white" />
             <span className="rounded-full bg-slate-600 flex items-center justify-center h-[40px] w-[40px]">
                 {playing ? (
