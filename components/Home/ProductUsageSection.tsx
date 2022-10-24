@@ -6,7 +6,7 @@ const ProductUsageSection = () => {
     return (
         <section id="about_product" className="min-h-96 mx-auto py-5">
             <TextHeader>What We Offer</TextHeader>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center py-5 mx-auto container">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center py-5 mx-auto container px-5">
                 {WHATWEOFFER.map((offer) => (
                     <div
                         key={offer.label}

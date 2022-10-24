@@ -1,13 +1,15 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import Layout from '../components/Layout'
 import { DefaultSeo } from 'next-seo'
-import seo from '../seo.config'
+import seoconfig from 'seo.config'
+import Layout from '@components/Layout'
+import MusicPlayer from '@components/Player'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <Layout>
-            <DefaultSeo {...seo} />
+            <DefaultSeo {...seoconfig} />
+            <MusicPlayer />
             <Component {...pageProps} />
         </Layout>
     )
