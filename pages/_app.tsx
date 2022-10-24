@@ -4,14 +4,18 @@ import { DefaultSeo } from 'next-seo'
 import seoconfig from 'seo.config'
 import Layout from '@components/Layout'
 import MusicPlayer from '@components/Player'
+import { Provider } from 'react-redux'
+import { store } from 'redux/store'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <Layout>
-            <DefaultSeo {...seoconfig} />
-            <MusicPlayer />
-            <Component {...pageProps} />
-        </Layout>
+        <Provider store={store}>
+            <Layout>
+                <DefaultSeo {...seoconfig} />
+                <MusicPlayer />
+                <Component {...pageProps} />
+            </Layout>
+        </Provider>
     )
 }
 
