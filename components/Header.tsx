@@ -7,7 +7,7 @@ import { NAVLINKS } from '../assets/constants'
 const Header = () => {
     const router = useRouter()
     return (
-        <header className="sticky top-0 h-20 container mx-auto flex align-middle z-[1000] bg-black backdrop-blur-lg  opacity-30 bg-white/10 border-b border-b-neutral-500">
+        <header className="sticky top-0 h-20 w-full flex align-middle z-[1000] bg-black backdrop-blur-lg backdrop-saturate-50 border-b border-b-neutral-200/10">
             <nav className="flex justify-end w-full px-3 items-center">
                 <span className="sm:hidden cursor-pointer">
                     <Bars2Icon className="text-white h-10 w-10" />
