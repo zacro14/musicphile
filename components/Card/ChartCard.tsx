@@ -8,7 +8,7 @@ interface Props {
     title: string
     description: string
 }
-const ChartCard = (props: Props) => {
+export const ChartCard = (props: Props) => {
     const { banner, category, title, description } = props
     return (
         <div className="flex flex-col gap-y-3 mr-5">
@@ -52,5 +52,3 @@ const ChartCard = (props: Props) => {
         </div>
     )
 }
-
-export default ChartCard

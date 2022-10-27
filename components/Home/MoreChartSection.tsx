@@ -1,7 +1,7 @@
-import ChartCard from '@components/Card/ChartCard'
 import React from 'react'
 import MoreChartBanner from '@assets/image/200x200more_chart.webp'
 import TextHeader from '@components/TextHeader'
+import { ChartCard } from '@components/Card'
 
 const MoreChart = () => {
     return (
