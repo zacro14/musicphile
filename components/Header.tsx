@@ -2,13 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Bars2Icon } from '@heroicons/react/24/solid'
-import { NAVLINKS } from '../assets/constants'
+import { NAVLINKS } from '@assets/constants'
 
 const Header = () => {
     const router = useRouter()
     return (
-        <nav className="h-20 container mx-auto flex align-middle">
-            <div className="flex justify-end w-full px-3 items-center">
+        <header className="sticky top-0 h-20 w-full flex align-middle z-[1000] bg-black backdrop-blur-lg backdrop-saturate-50 border-b border-b-neutral-200/10">
+            <nav className="flex justify-end w-full px-3 items-center">
                 <span className="sm:hidden cursor-pointer">
                     <Bars2Icon className="text-white h-10 w-10" />
                 </span>
@@ -30,8 +30,8 @@ const Header = () => {
                         </li>
                     ))}
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </header>
     )
 }
 

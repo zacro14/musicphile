@@ -14,7 +14,7 @@ const SeekStatusMobile = () => {
                 min={0}
                 max={90}
                 onInput={(e) => onInput(e)}
-                className="h-1 2xl:mx-6 rounded-lg cursor-pointer absolute top-0 left-0 translate-y-[1px] p-0 w-full -order-1 md:hidden lg:hidden"
+                className="h-1 2xl:mx-6 rounded-lg cursor-pointer absolute top-0 -left-1 -right-0 translate-y-[1px] p-0 w-full -order-1 md:hidden lg:hidden"
             />
         </div>
     )

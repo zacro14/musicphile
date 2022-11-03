@@ -6,7 +6,7 @@ interface Props {
     name: string
     img: string | StaticImageData | any
 }
-const TopArtistCard = (props: Props) => {
+export const TopArtistCard = (props: Props) => {
     const { name, img } = props
     return (
         <div className="flex flex-col space-y-2 snap-center">
@@ -32,5 +32,3 @@ const TopArtistCard = (props: Props) => {
         </div>
     )
 }
-
-export default TopArtistCard

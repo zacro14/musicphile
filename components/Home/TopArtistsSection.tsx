@@ -1,8 +1,8 @@
-import TopArtistCard from '@components/Card/TopArtistCard'
 import TextHeader from '@components/TextHeader'
 import React from 'react'
 import ArtistImg from '@assets/image/200x200artist.webp'
 import David from '@assets/image/200x200bb -davidgueta.webp'
+import { TopArtistCard } from '@components/Card'
 
 const TopArtists = () => {
     return (
