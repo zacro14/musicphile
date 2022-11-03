@@ -1,5 +1,6 @@
 import React from 'react'
 import Control from './Control'
+import Player from './Player'
 import SeekStatus from './SeekStatus'
 import SeekStatusMobile from './SeekStatusMobile'
 import Track from './Track'
@@ -15,6 +16,7 @@ const MusicPlayer = () => {
                     <SeekStatus />
                     <Control />
                     <Volume />
+                    <Player />
                 </div>
             </div>
         </>

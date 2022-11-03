@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { Bars2Icon } from '@heroicons/react/24/solid'
-import { NAVLINKS } from '../assets/constants'
+import { NAVLINKS } from '@assets/constants'
 
 const Header = () => {
     const router = useRouter()
