@@ -17,16 +17,18 @@ interface Props {
     title: string
     subtitle: string
     image?: image | any
-    artist?: artistprop[] | any
+    artist?: artistprop[] | undefined
     id: string
 }
 
 const SonglistItem = (props: Props) => {
-    const { subtitle, title, order, image, id: key } = props
+    const { subtitle, title, order, image, id: key, artist } = props
+
     const [playing, setPlaying] = useState(true)
 
+    console.log(props.artist)
     return (
-        <div className="flex h-24 items-center hover:bg-slate-600 hover:bg-opacity-10 rounded-xl mb-5">
+        <div className="flex h-24 items-center hover:bg-slate-600 hover:bg-opacity-10 rounded-xl mb-5 p-5">
             <div className="flex-none mr-2 w-10 font-semibold">{order}</div>
             <div className="flex-1 w-64">
                 <div className="relative h-20 w-20 object-cover">
@@ -66,17 +68,24 @@ const SonglistItem = (props: Props) => {
                             {title}
                         </a>
                     </Link>
-                    <Link
-                        href={{
-                            pathname: '/artist/[slug]',
-                            query: { slug: props?.artist[0]?.adamid },
-                        }}
-                        passHref
-                    >
+
+                    {artist !== undefined ? (
+                        <Link
+                            href={{
+                                pathname: '/artist/[slug]',
+                                query: { slug: artist[0].adamid },
+                            }}
+                            passHref
+                        >
+                            <a className="text-slate-400 hover:underline underline-offset-4">
+                                {subtitle}
+                            </a>
+                        </Link>
+                    ) : (
                         <a className="text-slate-400 hover:underline underline-offset-4">
                             {subtitle}
                         </a>
-                    </Link>
+                    )}
                 </span>
             </div>
         </div>
