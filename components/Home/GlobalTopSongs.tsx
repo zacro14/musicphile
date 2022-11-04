@@ -14,7 +14,7 @@ const GlobalTopSongs = () => {
     }
 
     const groupby = createGroups(globaltopchart.slice(0, 20), 7)
-    console.log(groupby)
+
     return (
         <section className="min-h-[80] text-white border-t border-t-1 border-slate-300 border-opacity-10 my-5">
             <div className="px-5">
@@ -26,7 +26,7 @@ const GlobalTopSongs = () => {
                         </a>
                     </span>
                 </Link>
-                <div className="snap-x flex container mx-auto overflow-x-auto">
+                <div className="snap-x flex container mx-auto overflow-x-auto pt-5">
                     {groupby.map((songs, index) => (
                         <div
                             key={index}

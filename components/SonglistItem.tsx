@@ -33,7 +33,7 @@ const SonglistItem = (props: Props) => {
             <div className="flex-1 w-64">
                 <div className="relative h-20 w-20 object-cover rounded-lg">
                     <Image
-                        className="bg-white"
+                        className="bg-white rounded-lg"
                         placeholder="blur"
                         blurDataURL={image?.background}
                         src={image?.background}
