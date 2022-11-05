@@ -36,6 +36,7 @@ const GlobalTopSongs = () => {
                                 <SonglistItem
                                     key={i}
                                     id={song.key}
+                                    data={song}
                                     // order={index + 1 + i}
                                     title={song.title}
                                     subtitle={song.subtitle}
