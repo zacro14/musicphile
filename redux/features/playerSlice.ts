@@ -1,5 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+interface ActiveSongProps {
+    title: string
+}
+
+type PlayerState = {
+    isPlaying: boolean
+    activeSong: ActiveSongProps
+    currentIndex: number
+    isActive: boolean
+    currentSongs: []
+}
+
 const playerslice = createSlice({
     name: 'player',
     initialState: {
@@ -8,7 +20,8 @@ const playerslice = createSlice({
         currentIndex: 0,
         isActive: false,
         currentSongs: [],
-    },
+    } as PlayerState,
+
     reducers: {
         setActiveSong: (state, action) => {
             state.activeSong = action.payload.song
