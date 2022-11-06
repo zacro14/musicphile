@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { PlayCircleIcon, PauseCircleIcon } from '@heroicons/react/24/solid'
 import { playpause, setActiveSong } from 'redux/features/playerSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import { useAppDispatch, useAppSelector } from 'redux/store'
 
 type image = {
     background: string
@@ -26,8 +27,8 @@ interface Props {
 
 const SonglistItem = (props: Props) => {
     const { subtitle, title, order, image, id: key, artist, data } = props
-    const dispatch = useDispatch()
-    const { isPlaying, activeSong } = useSelector((state) => state.player)
+    const dispatch = useAppDispatch()
+    const { isPlaying, activeSong } = useAppSelector((state) => state.player)
 
     const handlePlaying = () => {
         dispatch(setActiveSong({ song: props, i: order, data }))
@@ -52,10 +53,10 @@ const SonglistItem = (props: Props) => {
                     />
                     <div
                         className={`absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] group-hover:block ${
-                            activeSong.title === title ? 'block' : 'hidden'
+                            activeSong?.title === title ? 'block' : 'hidden'
                         }`}
                     >
-                        {isPlaying && activeSong.title === props.title ? (
+                        {isPlaying && activeSong?.title === props.title ? (
                             <PauseCircleIcon
                                 className="h-10 w-10 cursor-pointer"
                                 onClick={handlePause}
