@@ -1,12 +1,28 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-interface ActiveSongProps {
+interface IAction {
+    [key: string]: string
+}
+interface IHub {
+    actions: IAction[]
+}
+interface IData {
     title: string
+    hub: IHub
+}
+interface IImage {
+    background: string
+}
+export interface IActiveSongProps {
+    title: string
+    data: IData
+    subtitle: string
+    image: IImage
 }
 
 type PlayerState = {
     isPlaying: boolean
-    activeSong: ActiveSongProps
+    activeSong?: IActiveSongProps
     currentIndex: number
     isActive: boolean
     currentSongs: []
