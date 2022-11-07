@@ -36,12 +36,12 @@ const GlobalTopSongs = () => {
                                 <SonglistItem
                                     key={i}
                                     id={song.key}
-                                    data={song}
-                                    // order={index + 1 + i}
+                                    data={globaltopchart}
                                     title={song.title}
                                     subtitle={song.subtitle}
-                                    image={song.images}
+                                    images={song.images}
                                     artist={song?.artists}
+                                    hub={song.hub}
                                 />
                             ))}
                         </div>
