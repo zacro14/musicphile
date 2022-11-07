@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 interface IAction {
     [key: string]: string
 }
-interface IHub {
+export interface IHub {
     actions: IAction[]
 }
 interface IData {
@@ -17,7 +17,8 @@ export interface IActiveSongProps {
     title: string
     data: IData
     subtitle: string
-    image: IImage
+    images: IImage
+    hub: IHub
 }
 
 type PlayerState = {
@@ -48,8 +49,12 @@ const playerslice = createSlice({
             } else {
                 state.currentSongs = action.payload.data
             }
-
             state.currentIndex = action.payload.i
+            state.isActive = true
+        },
+        nextSong: (state, action) => {
+            state.activeSong = state.currentSongs[action.payload]
+            state.currentIndex = action.payload
             state.isActive = true
         },
         playpause: (state, action) => {
@@ -58,6 +63,6 @@ const playerslice = createSlice({
     },
 })
 
-export const { setActiveSong, playpause } = playerslice.actions
+export const { setActiveSong, playpause, nextSong } = playerslice.actions
 
 export default playerslice.reducer
