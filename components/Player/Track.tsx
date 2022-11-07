@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import TrackImage from '@assets/image/200x200bb more_chart_2.webp'
 
 interface ITrackProps {
     title: string
@@ -20,8 +19,10 @@ const Track = (props: ITrackProps) => {
                 />
             </div>
             <div className="flex flex-col">
-                <span className="font-bold">{title}</span>
-                <span className="text-sm text-slate-400">{subtitle}</span>
+                <span className="font-bold truncate">{title}</span>
+                <span className="text-sm text-slate-400 truncate">
+                    {subtitle}
+                </span>
             </div>
         </div>
     )

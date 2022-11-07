@@ -10,8 +10,13 @@ import {
 interface IProps {
     isPlaying: boolean
     handlePlayPause: () => void
+    handleNextSong: () => void
 }
-const Control: React.FC<IProps> = ({ isPlaying, handlePlayPause }) => {
+const Control: React.FC<IProps> = ({
+    isPlaying,
+    handlePlayPause,
+    handleNextSong,
+}) => {
     return (
         <div className="flex w-24 md:max-w-[120px] lg:max-w-[120px] items-center justify-around md:w-28 lg:w-52 2xl:w-80 flex-auto mx-10 md:mx-20 lg:20">
             <MdSkipPrevious size={30} className="cursor-pointer text-white" />
@@ -30,7 +35,11 @@ const Control: React.FC<IProps> = ({ isPlaying, handlePlayPause }) => {
                     />
                 )}
             </span>
-            <MdSkipNext size={30} className=" cursor-pointer text-white" />
+            <MdSkipNext
+                size={30}
+                className=" cursor-pointer text-white"
+                onClick={handleNextSong}
+            />
         </div>
     )
 }
