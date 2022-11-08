@@ -1,4 +1,3 @@
-import { State } from '0g'
 import Image from 'next/image'
 import React from 'react'
 import { useAppSelector } from 'redux/store'
