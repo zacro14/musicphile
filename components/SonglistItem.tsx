@@ -1,9 +1,8 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import { PlayCircleIcon, PauseCircleIcon } from '@heroicons/react/24/solid'
 import { IHub, playpause, setActiveSong } from 'redux/features/playerSlice'
-import { useDispatch, useSelector } from 'react-redux'
 import { useAppDispatch, useAppSelector } from 'redux/store'
 
 type image = {
@@ -84,7 +83,7 @@ const SonglistItem = (props: Props) => {
                         }}
                         passHref
                     >
-                        <a className="font-bold hover:underline underline-offset-4">
+                        <a className="truncate font-bold hover:underline underline-offset-4">
                             {title}
                         </a>
                     </Link>
@@ -97,7 +96,7 @@ const SonglistItem = (props: Props) => {
                             }}
                             passHref
                         >
-                            <a className="text-slate-400 hover:underline underline-offset-4">
+                            <a className="truncate text-slate-400 hover:underline underline-offset-4">
                                 {subtitle}
                             </a>
                         </Link>
