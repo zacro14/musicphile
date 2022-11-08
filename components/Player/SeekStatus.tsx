@@ -20,7 +20,7 @@ const SeekStatus: React.FC<ISeekProps> = ({
         `${Math.floor(time / 60)}:${`0${Math.floor(time % 60)}`.slice(-2)}`
 
     return (
-        <div className="hidden sm:flex flex-row items-center justify-center flex-auto">
+        <div className="hidden md:flex lg:flex flex-row items-center justify-center flex-auto">
             <p className="text-white">
                 {value === 0 ? '0:00' : getTime(value)}
             </p>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { nextSong, playpause } from 'redux/features/playerSlice'
+import { nextSong, playpause, prevSong } from 'redux/features/playerSlice'
 import { useAppDispatch, useAppSelector } from 'redux/store'
 import Control from './Control'
 import Player from './Player'
@@ -9,9 +9,8 @@ import Track from './Track'
 import Volume from './Volume'
 
 const MusicPlayer = () => {
-    const { isActive, isPlaying, activeSong, currentSongs } = useAppSelector(
-        (state) => state.player
-    )
+    const { isActive, isPlaying, activeSong, currentSongs, currentIndex } =
+        useAppSelector((state) => state.player)
     const [duration, setDuration] = useState(0)
     const [seekTime, setSeekTime] = useState<string>('0')
     const [appTime, setAppTime] = useState(0)
@@ -27,9 +26,22 @@ const MusicPlayer = () => {
         }
     }
 
-    const handleNextSong = (): void => {
+    const handleNextSong = () => {
         // dispatch(playpause(false))
-        dispatch(nextSong(Math.floor(Math.random() * currentSongs.length)))
+        dispatch(
+            nextSong(
+                currentSongs.length === currentIndex ? 0 : currentIndex + 1
+            )
+        )
+    }
+
+    console.log('current index', currentIndex)
+    const handlePrevSong = () => {
+        if (currentIndex === 0) {
+            dispatch(prevSong(currentSongs.length - 1))
+        } else {
+            dispatch(prevSong(currentIndex - 1))
+        }
     }
     return (
         <>
@@ -60,6 +72,7 @@ const MusicPlayer = () => {
                                 isPlaying={isPlaying}
                                 handlePlayPause={handleplaypause}
                                 handleNextSong={handleNextSong}
+                                handlePrevSong={handlePrevSong}
                             />
                             <Volume />
                             <Player
