@@ -57,12 +57,19 @@ const playerslice = createSlice({
             state.currentIndex = action.payload
             state.isActive = true
         },
+
+        prevSong: (state, action) => {
+            state.activeSong = state.currentSongs[action.payload]
+            state.currentIndex = action.payload
+            state.isActive = true
+        },
         playpause: (state, action) => {
             state.isPlaying = action.payload
         },
     },
 })
 
-export const { setActiveSong, playpause, nextSong } = playerslice.actions
+export const { setActiveSong, playpause, nextSong, prevSong } =
+    playerslice.actions
 
 export default playerslice.reducer
