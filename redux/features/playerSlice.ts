@@ -23,7 +23,7 @@ export interface IActiveSongProps {
 
 type PlayerState = {
     isPlaying: boolean
-    activeSong?: IActiveSongProps
+    activeSong?: IActiveSongProps | null
     currentIndex: number
     isActive: boolean
     currentSongs: []
@@ -33,7 +33,7 @@ const playerslice = createSlice({
     name: 'player',
     initialState: {
         isPlaying: false,
-        activeSong: {},
+        activeSong: null,
         currentIndex: 0,
         isActive: false,
         currentSongs: [],
