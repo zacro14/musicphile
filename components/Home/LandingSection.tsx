@@ -4,9 +4,9 @@ import { PlayCircleIcon } from '@heroicons/react/24/solid'
 
 const LandingSection = () => {
     return (
-        <section id="landing_section" className="min-h-80 w-full">
-            <div className="mx-auto container flex flex-col md:flex-row items-center justify-center p-5 gap-7">
-                <div className=" container mx-auto">
+        <section id="landing_section" className="min-h-80 w-full mt-20">
+            <div className="mx-auto container flex flex-col md:flex-row p-5 gap-7">
+                <div className="mx-auto">
                     <h1 className="font-bold text-6xl md:text-8xl mb-5">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                             Musicphile

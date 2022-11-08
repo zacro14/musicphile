@@ -12,8 +12,6 @@ interface BannerProps {
 const Banner = (props: BannerProps) => {
     const { banner } = props
     const { activeSong } = useAppSelector((state) => state.player)
-
-    console.log(activeSong)
     return (
         <section className=" h-72 md:h-96 text-white bg-slate-100 w-full overflow-hidden bg-gradient-to-t from-indigo-500  ">
             <div className="relative mx-auto max-w-7xl p-5 flex flex-col md:flex-row  md:items-center h-full space-y-5">
@@ -45,7 +43,7 @@ const Banner = (props: BannerProps) => {
                         </li>
                     </ul>
                 </div>
-                <div className=" relative w-40 h-40 md:w-80 md:h-80 bg-gradient-to-b from-slate-200 to-indigo-800 object-cover flex-col rounded-lg mr-5">
+                <div className=" relative w-40 h-40 md:w-80 md:h-80 bg-gradient-to-b from-slate-200 to-indigo-800 object-cover flex-col rounded-lg mr-5 drop-shadow-2xl">
                     {activeSong ? (
                         <Image
                             className="rounded-lg"
