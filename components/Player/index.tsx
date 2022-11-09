@@ -27,15 +27,13 @@ const MusicPlayer = () => {
     }
 
     const handleNextSong = () => {
-        // dispatch(playpause(false))
         dispatch(
             nextSong(
-                currentSongs.length === currentIndex ? 0 : currentIndex + 1
+                currentSongs.length - 1 === currentIndex ? 0 : currentIndex + 1
             )
         )
     }
 
-    console.log('current index', currentIndex)
     const handlePrevSong = () => {
         if (currentIndex === 0) {
             dispatch(prevSong(currentSongs.length - 1))
@@ -43,6 +41,7 @@ const MusicPlayer = () => {
             dispatch(prevSong(currentIndex - 1))
         }
     }
+
     return (
         <>
             <div className="fixed h-20 w-full text-white bottom-0 bg-gray-900 z-10 border-t border-slate-300 border-opacity-10 py-3 px-5">
