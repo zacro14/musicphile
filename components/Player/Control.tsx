@@ -20,7 +20,7 @@ const Control: React.FC<IProps> = ({
     handlePrevSong,
 }) => {
     return (
-        <div className="flex w-24 md:max-w-[120px] lg:max-w-[120px] items-center justify-around md:w-28 lg:w-52 2xl:w-80 flex-auto mx-10 md:mx-20 lg:20">
+        <div className="flex max-w-24 md:max-w-[120px] lg:max-w-[120px] items-center justify-evenly md:w-28 lg:w-52 2xl:w-80 flex-auto mx-10 md:mx-20 lg:20">
             <MdSkipPrevious
                 size={30}
                 className="cursor-pointer text-white"
@@ -43,7 +43,7 @@ const Control: React.FC<IProps> = ({
             </span>
             <MdSkipNext
                 size={30}
-                className=" cursor-pointer text-white"
+                className="cursor-pointer text-white"
                 onClick={handleNextSong}
             />
         </div>

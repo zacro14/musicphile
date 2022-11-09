@@ -3,9 +3,9 @@ import Banner from '@components/Banner/Banner'
 import SonglistItem from '@components/SonglistItem'
 import Songs from '@assets/data/getWorldChart.json'
 import Seo from '@components/Seo/Seo'
+import { NextPage } from 'next'
 
-const Charts = () => {
-    console.log(Songs.slice(0, 2))
+const Charts: NextPage = () => {
     return (
         <>
             <Seo title="Music Just For You" description="discover music" />
@@ -14,8 +14,8 @@ const Charts = () => {
                 <section className="pt-5 text-white px-5">
                     {Songs.map((song: any, i: number) => (
                         <SonglistItem
-                            key={i}
-                            order={i + 1}
+                            key={song.id}
+                            order={i}
                             id={song.key}
                             title={song.title}
                             subtitle={song.subtitle}
