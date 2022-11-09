@@ -44,8 +44,11 @@ const SonglistItem = (props: Props) => {
                 activeSong?.title === title && 'bg-slate-600 bg-opacity-10'
             }  hover:bg-slate-600 hover:bg-opacity-10 rounded-xl mb-5 p-5`}
         >
-            <div className="flex-none mr-2 w-10 font-semibold">{order}</div>
-
+            {order !== undefined && (
+                <div className="flex-none mr-2 w-10 font-semibold">
+                    {order === 0 ? 1 : order + 1}
+                </div>
+            )}
             <div className="flex-1 w-64 group">
                 <div className="relative h-20 w-20 object-cover rounded-lg">
                     <Image
