@@ -27,8 +27,8 @@ interface Props {
 
 const SonglistItem = (props: Props) => {
     const { subtitle, title, order, images, id: key, artist, data } = props
-    const dispatch = useAppDispatch()
     const { isPlaying, activeSong } = useAppSelector((state) => state.player)
+    const dispatch = useAppDispatch()
 
     const handlePlaying = () => {
         dispatch(setActiveSong({ song: props, i: order, data }))
@@ -45,6 +45,7 @@ const SonglistItem = (props: Props) => {
             }  hover:bg-slate-600 hover:bg-opacity-10 rounded-xl mb-5 p-5`}
         >
             <div className="flex-none mr-2 w-10 font-semibold">{order}</div>
+
             <div className="flex-1 w-64 group">
                 <div className="relative h-20 w-20 object-cover rounded-lg">
                     <Image

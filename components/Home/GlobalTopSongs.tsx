@@ -16,10 +16,7 @@ const GlobalTopSongs = () => {
             return array.slice(i * perGroup, (i + 1) * perGroup)
         })
     }
-
     const groupby = createGroups(globaltopchart.slice(0, 20), 7)
-    console.log(groupby)
-
     return (
         <section className="min-h-[80] text-white border-t border-t-1 border-slate-300 border-opacity-10 my-5">
             <div className="px-5">
@@ -37,10 +34,10 @@ const GlobalTopSongs = () => {
                             key={index}
                             className="snap-center px-3 w-96  shrink-0 pb-5"
                         >
-                            {songs.map((song: any, i: any) => (
+                            {songs.map((song: any, i: number) => (
                                 <SonglistItem
                                     key={i}
-                                    order={song.order + 1}
+                                    order={song?.order}
                                     id={song.key}
                                     data={globaltopchart}
                                     title={song.title}

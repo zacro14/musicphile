@@ -21,7 +21,6 @@ const Player = (props: PlayerProps) => {
         }
     }
 
-    console.log('ref =>', ref)
     return (
         <audio
             ref={ref}
