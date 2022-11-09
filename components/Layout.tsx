@@ -8,7 +8,7 @@ type Children = {
 }
 
 const Layout: React.FC<Children> = ({ children }) => {
-    const { activeSong, isActive } = useAppSelector((state) => state.player)
+    const { isActive } = useAppSelector((state) => state.player)
 
     return (
         <div className="bg-black">
