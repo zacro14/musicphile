@@ -42,14 +42,14 @@ const SonglistItem = (props: Props) => {
         <div
             className={`flex h-24 items-center  ${
                 activeSong?.title === title && 'bg-slate-600 bg-opacity-10'
-            }  hover:bg-slate-600 hover:bg-opacity-10 rounded-xl mb-5 p-5`}
+            }  hover:bg-slate-600 hover:bg-opacity-10 rounded-xl mb-5 py-5  px-3`}
         >
             {order !== undefined && (
-                <div className="flex-none mr-2 w-10 font-semibold">
+                <div className="mr-2 w-5 font-semibold">
                     {order === 0 ? 1 : order + 1}
                 </div>
             )}
-            <div className="flex-1 w-64 group">
+            <div className=" mr-5 md:w-64 group">
                 <div className="relative h-20 w-20 object-cover rounded-lg">
                     <Image
                         className="bg-white rounded-lg"
