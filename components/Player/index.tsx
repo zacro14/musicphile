@@ -7,6 +7,7 @@ import SeekStatus from './SeekStatus'
 import SeekStatusMobile from './SeekStatusMobile'
 import Track from './Track'
 import Volume from './Volume'
+import { motion } from 'framer-motion'
 
 const MusicPlayer = () => {
     const { isActive, isPlaying, activeSong, currentSongs, currentIndex } =
@@ -43,7 +44,12 @@ const MusicPlayer = () => {
     }
 
     return (
-        <>
+        <motion.div
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+        >
             <div className="fixed h-20 w-full text-white bottom-0 bg-gray-900 z-10 border-t border-slate-300 border-opacity-10 py-3 px-5">
                 {activeSong && (
                     <>
@@ -90,7 +96,7 @@ const MusicPlayer = () => {
                     </>
                 )}
             </div>
-        </>
+        </motion.div>
     )
 }
 
