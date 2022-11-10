@@ -1,7 +1,8 @@
 import React from 'react'
 import { useAppSelector } from 'redux/store'
 import Footer from './Footer'
-import { Header } from './Header'
+import { DesktopHeader, MobileHeader } from './Header'
+import Header from './Header/Header'
 import MusicPlayer from './Player'
 type Children = {
     children: React.ReactNode
