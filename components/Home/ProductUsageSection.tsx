@@ -1,11 +1,11 @@
+import { WHATWEOFFER } from '@assets/constants'
+import TextHeader from '@components/TextHeader'
 import React from 'react'
-import { WHATWEOFFER } from '../../assets/constants'
-import TextHeader from '../TextHeader'
 
 const ProductUsageSection = () => {
     return (
         <section id="about_product" className="min-h-96 mx-auto py-5">
-            <TextHeader>What We Offer</TextHeader>
+            <TextHeader>What You Can Do</TextHeader>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center py-5 mx-auto container px-5">
                 {WHATWEOFFER.map((offer) => (
                     <div

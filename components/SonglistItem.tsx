@@ -1,9 +1,8 @@
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React from 'react'
 import { PlayCircleIcon, PauseCircleIcon } from '@heroicons/react/24/solid'
-import { playpause, setActiveSong } from 'redux/features/playerSlice'
-import { useDispatch, useSelector } from 'react-redux'
+import { IHub, playpause, setActiveSong } from 'redux/features/playerSlice'
 import { useAppDispatch, useAppSelector } from 'redux/store'
 
 type image = {
@@ -19,16 +18,17 @@ interface Props {
     order?: number
     title: string
     subtitle: string
-    image?: image | any
+    images?: image | any
     artist?: artistprop[] | undefined
     id: string
-    data?: any
+    hub: IHub
+    data: any
 }
 
 const SonglistItem = (props: Props) => {
-    const { subtitle, title, order, image, id: key, artist, data } = props
-    const dispatch = useAppDispatch()
+    const { subtitle, title, order, images, id: key, artist, data } = props
     const { isPlaying, activeSong } = useAppSelector((state) => state.player)
+    const dispatch = useAppDispatch()
 
     const handlePlaying = () => {
         dispatch(setActiveSong({ song: props, i: order, data }))
@@ -39,15 +39,23 @@ const SonglistItem = (props: Props) => {
     }
 
     return (
-        <div className="flex h-24 items-center hover:bg-slate-600 hover:bg-opacity-10 rounded-xl mb-5 p-5">
-            <div className="flex-none mr-2 w-10 font-semibold">{order}</div>
-            <div className="flex-1 w-64 group">
+        <div
+            className={`flex h-24 items-center  ${
+                activeSong?.title === title && 'bg-slate-600 bg-opacity-10'
+            }  hover:bg-slate-600 hover:bg-opacity-10 rounded-xl mb-5 py-5  px-3`}
+        >
+            {order !== undefined && (
+                <div className="mr-2 w-5 font-semibold">
+                    {order === 0 ? 1 : order + 1}
+                </div>
+            )}
+            <div className=" mr-5 md:w-64 group">
                 <div className="relative h-20 w-20 object-cover rounded-lg">
                     <Image
                         className="bg-white rounded-lg"
                         placeholder="blur"
-                        blurDataURL={image?.background}
-                        src={image?.background}
+                        blurDataURL={images?.background}
+                        src={images?.background}
                         alt={title}
                         layout="fill"
                     />
@@ -79,7 +87,7 @@ const SonglistItem = (props: Props) => {
                         }}
                         passHref
                     >
-                        <a className="font-bold hover:underline underline-offset-4">
+                        <a className="truncate font-bold hover:underline underline-offset-4">
                             {title}
                         </a>
                     </Link>
@@ -92,7 +100,7 @@ const SonglistItem = (props: Props) => {
                             }}
                             passHref
                         >
-                            <a className="text-slate-400 hover:underline underline-offset-4">
+                            <a className="truncate text-slate-400 hover:underline underline-offset-4">
                                 {subtitle}
                             </a>
                         </Link>
