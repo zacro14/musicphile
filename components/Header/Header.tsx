@@ -1,21 +1,24 @@
+import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
 import { DesktopHeader } from './DesktopHeader'
 import { MobileHeader } from './MobileHeader'
 
-const Header = () => {
+export const Header = () => {
     const [isOpen, setOpen] = useState(false)
     const router = useRouter()
     return (
         <header>
             <DesktopHeader setOpenMenu={setOpen} />
-            <MobileHeader
-                router={router}
-                setOpenMenu={setOpen}
-                isOpen={isOpen}
-            />
+            <AnimatePresence>
+                {isOpen && (
+                    <MobileHeader
+                        router={router}
+                        setOpenMenu={setOpen}
+                        isOpen={isOpen}
+                    />
+                )}
+            </AnimatePresence>
         </header>
     )
 }
-
-export default Header

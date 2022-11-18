@@ -5,6 +5,7 @@ import Logo from '@assets/image/musicphile_logo1_200x200.png'
 import { NAVLINKS } from '@assets/constants'
 import Link from 'next/link'
 import { NextRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 export interface Header {
     isOpen: boolean
@@ -15,7 +16,10 @@ export interface Header {
 export const MobileHeader: React.FC<Header> = (props) => {
     const { isOpen, setOpenMenu, router } = props
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className={`fixed ${
                 isOpen ? 'block' : 'hidden'
             }  top-0 md:hidden lg:hidden h-screen bg-black z-[1001] w-full min-h-20`}
@@ -53,6 +57,6 @@ export const MobileHeader: React.FC<Header> = (props) => {
                     ))}
                 </ul>
             </nav>
-        </div>
+        </motion.div>
     )
 }
